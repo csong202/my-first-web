@@ -18,10 +18,15 @@ h3 {
     color: SteelBlue;
     text-align: left;
     font-family: Georgia;
+    font-size: 25px;
+}
+h4 {
+    color: MediumVioletRed;
+    font-family: Georgia;
     font-size: 20px;
 }
 p {
     color: thistle;
     font-family: Abel;
-    font-size: 16px;
+    font-size: 18px;
 }

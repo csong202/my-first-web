@@ -2,37 +2,75 @@
 <html>
 <head>
     <link rel="stylesheet" href="styles.css">
-<title>My First Website</title>
+    <title>My First Website</title>
+
+    <script>
+        // js code can be placed in the head or the body section of an HTML page
+        // it can be placed in both
+        // functions are placed in the script areas
+
+        function changeContent() {
+            document.getElementById('pDemo1').innerHTML="Hello JavaScript!";
+        }
+    </script>
 </head>
 <body>
 
 <h1>My First Website</h1>
 <p>This is a paragraph with some <b>bold</b> text. Did you know that you
-can write some <i>italic</i> text too?</p>
+can write some <i>italic</i> text too?</p><br>
 
 <h2>Heading 2</h2>
 <p id="pDemo1">JavaScript can change HTML content.</p>
 
 <button type="button"
-        onclick="document.getElementById('pDemo1').innerHTML
-        ='Hello JavaScript!'">Click Me!
+    onclick="changeContent()">Click Me!
 </button>
-
 <button type="button"
-        onclick="document.getElementById('pDemo1').innerHTML
-        ='JavaScript can change HTML content.'">Show Original Text
+    onclick="document.getElementById('pDemo1').innerHTML
+    ='JavaScript can change HTML content.'">Show Original Text
 </button>
+<br>
 
-<h3>JavaScript Can Change HTML Attributes</h3>
+<h3>What Else Can JavaScript Change?</h3>
+<h4>Attributes</h4>
+<p>For example, JavaScript can change the value of the src (source attribute).</p>
 <img id="imgFruit" src="images/apple.jpg" style="width:100px">
 
 <button onclick="document.getElementById('imgFruit').src='images/orange.jpg'">
     Orange
 </button>
-
-<button onclick="document.getElementById('imgFruit').src='images/applejpg'">
+<button onclick="document.getElementById('imgFruit').src='images/apple.jpg'">
     Apple
 </button>
+
+
+<h4>HTML Styles (CSS)</h4>
+<p id="pStyle1">JavaScript can change the style of an HTML element.</p>
+
+<button type="button"
+    onclick="document.getElementById('pStyle1').style.fontFamily='Comic Sans MS'">
+    Change my font!
+</button>
+<button type="button"
+    onclick="document.getElementById('pStyle1').style.fontFamily='Abel'">
+    Show original font
+</button>
+
+<p id="pStyle2">JavaScript can also hide HTML Elements</p>
+<button type="button"
+    onclick="document.getElementById('pStyle2').style.display='none'">
+    Hide element
+</button>
+<button type="button"
+    onclick="document.getElementById('pStyle2').style.display='block'">
+    Show element
+</button>
+
+<!-- *****JAVASCRIPT**** -->
+<script>
+
+</script>
 
 </body>
 </html>
