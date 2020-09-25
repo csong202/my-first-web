@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles.css">
     <title>My First Website</title>
 
+    <script src="myScript.js"></script>
     <script>
         // js code can be placed in the head or the body section of an HTML page
         // it can be placed in both
@@ -11,6 +12,9 @@
 
         function changeContent() {
             document.getElementById('pDemo1').innerHTML="Hello JavaScript!";
+        }
+        function changeContentBack() {
+            document.getElementById('pDemo1').innerHTML="JavaScript can change HTML content.";
         }
     </script>
 </head>
@@ -23,12 +27,12 @@ can write some <i>italic</i> text too?</p><br>
 <h2>Heading 2</h2>
 <p id="pDemo1">JavaScript can change HTML content.</p>
 
+<!-- function in head -->
 <button type="button"
     onclick="changeContent()">Click Me!
 </button>
 <button type="button"
-    onclick="document.getElementById('pDemo1').innerHTML
-    ='JavaScript can change HTML content.'">Show Original Text
+    onclick="changeContentBack()">Show Original Text
 </button>
 <br>
 
@@ -37,10 +41,12 @@ can write some <i>italic</i> text too?</p><br>
 <p>For example, JavaScript can change the value of the src (source attribute).</p>
 <img id="imgFruit" src="images/apple.jpg" style="width:100px">
 
-<button onclick="document.getElementById('imgFruit').src='images/orange.jpg'">
+<!-- function in external script -->
+<!-- external scrips are practical when the same code is used in many web pages -->
+<button type="button" onclick="imgOrange">
     Orange
 </button>
-<button onclick="document.getElementById('imgFruit').src='images/apple.jpg'">
+<button type="button" onclick="imgApple">
     Apple
 </button>
 
@@ -68,6 +74,7 @@ can write some <i>italic</i> text too?</p><br>
 </button>
 
 <!-- *****JAVASCRIPT**** -->
+
 <script>
 
 </script>
