@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="styles.css">
 <title>My First Website</title>
 </head>
 <body>
 
-<h1 style="font-family:Comic Sans MS;color:indigo;">My First Website</h1>
-<p>This is a paragraph with some <b>bold</b> text.</p>
+<h1>My First Website</h1>
+<p>This is a paragraph with some <b>bold</b> text. Did you know that you
+can write some <i>italic</i> text too?</p>
+
+<h2>Heading 2</h2>
+<p id="pDemo1">JavaScript can change HTML content.</p>
+
+<button type="button"
+        onclick="document.getElementById('pDemo1').innerHTML
+        ='Hello JavaScript!'">Click Me!
+</button>
+
+<button type="button"
+        onclick="document.getElementById('pDemo1').innerHTML
+        ='JavaScript can change HTML content.'">Show Original Text
+</button>
+
+<h3>JavaScript Can Change HTML Attributes</h3>
+<img id="imgFruit" src="images/apple.jpg" style="width:100px">
+
+<button onclick="document.getElementById('imgFruit').src='images/orange.jpg'">
+    Orange
+</button>
+
+<button onclick="document.getElementById('imgFruit').src='images/applejpg'">
+    Apple
+</button>
 
 </body>
 </html>

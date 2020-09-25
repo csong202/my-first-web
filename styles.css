@@ -1,0 +1,27 @@
+body {
+	background-color: #202020   /* dark grey */
+}
+h1 {
+    color: teal;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 40px;
+}
+h2 {
+    color: RebeccaPurple;
+    text-align: center;
+    font-family: Georgia;
+    font-size: 30px;
+    text-decoration: underline;
+}
+h3 {
+    color: SteelBlue;
+    text-align: left;
+    font-family: Georgia;
+    font-size: 20px;
+}
+p {
+    color: thistle;
+    font-family: Abel;
+    font-size: 16px;
+}
