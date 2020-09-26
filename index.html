@@ -75,24 +75,49 @@ can write some <i>italic</i> text too?</p><br>
     Show element
 </button><br>
 
-<button onclick="window.print()">Print this page</button>
+<button onclick="window.print()">Print this page</button><br>
 
 <!-- *****JAVASCRIPT**** -->
 
 <script>
+// Placing a ; at the end of each line is good practice, but not required
+// declare variables
+var x, y;
+x = 2;
+y = 6;
+var firstNumber = 123e5; // 123 * 10 ** (-5)
+document.write(firstNumber);
+
+// most javascript programmers user lower camel case when naming variables
+var firstName = "John", lastName = "Smith";
+
+// data type: object
+// js does not have ints and floats, only numbers
+// typeof operator returns the type of a variable or an expression
+var cat1 = {catName:"Simba", catBreed:"Domestic Shorthair"};
+
+/* if you put a number in quotes, the rest of the numbers will be treated
+as strings and concatenated */
+document.write("5" + 2 + 3); // 2 and 3 are treated as strings
+document.write(2 + 3 + "5"); // 2 and 3 are treated as integers
+document.write("<br>");
+
+// arrays
+var cars = ["Volvo", "BMW", "Saab"]
+
 // for testing purposes, it is convenient to use document.write() to display data
 /* using document.write() after an HTML doc is loaded, will delete all existing HTML
  eg: a button calling document.write() will delete all existing HTML on page
     - document.write() should only be used for testing purposes */
-document.write(5 + 6)
+document.write(x + y);
 
 // use window alert bos to display output
-window.alert(5 + 6)
+window.alert(3 * x);
 
 // for debugging purposes, you can call the console.log() method
 /* pres F12 on keyboard to activate debugging, then select "console" */
 console.log("This is the console")
-console.log(5 + 6)
+console.log(y / x);
 </script>
 
 </body>
