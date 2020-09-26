@@ -1,6 +1,9 @@
 body {
 	background-color: #202020   /* dark grey */
 }
+* {
+    /* CSS universal selector. selects all elements HTML elements on page */
+}
 h1 {
     color: teal;
     text-align: center;

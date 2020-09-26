@@ -73,12 +73,26 @@ can write some <i>italic</i> text too?</p><br>
 <button type="button"
     onclick="document.getElementById('pStyle2').style.display='block'">
     Show element
-</button>
+</button><br>
+
+<button onclick="window.print()">Print this page</button>
 
 <!-- *****JAVASCRIPT**** -->
 
 <script>
+// for testing purposes, it is convenient to use document.write() to display data
+/* using document.write() after an HTML doc is loaded, will delete all existing HTML
+ eg: a button calling document.write() will delete all existing HTML on page
+    - document.write() should only be used for testing purposes */
+document.write(5 + 6)
 
+// use window alert bos to display output
+window.alert(5 + 6)
+
+// for debugging purposes, you can call the console.log() method
+/* pres F12 on keyboard to activate debugging, then select "console" */
+console.log("This is the console")
+console.log(5 + 6)
 </script>
 
 </body>
