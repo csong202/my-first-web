@@ -92,10 +92,7 @@ document.write(firstNumber);
 // most javascript programmers user lower camel case when naming variables
 var firstName = "John", lastName = "Smith";
 
-// data type: object
-// js does not have ints and floats, only numbers
-// typeof operator returns the type of a variable or an expression
-var cat1 = {catName:"Simba", catBreed:"Domestic Shorthair"};
+
 
 /* if you put a number in quotes, the rest of the numbers will be treated
 as strings and concatenated */
@@ -105,6 +102,36 @@ document.write("<br>");
 
 // arrays
 var cars = ["Volvo", "BMW", "Saab"]
+
+/*
+=== same value and type
+== same value
+
+typeof undefined -> undefined
+    - undefined: both type and value are undefined. new variables are undefined by default
+        until they are assgined a value. you can assign a value of undefined
+typeof null -> object
+    - setting an object to null will empty the object, but the type will still be object
+null === undefined -> False
+null == undefined -> True
+*/
+
+// data type: object
+// js does not have ints and floats, only numbers
+// typeof operator returns the type of a variable or an expression
+var cat1 = {firstName:"Simba",
+    catBreed:"Domestic Shorthair",
+    weight:13.0
+    // method is a function stored as a property
+    fullName: function() {
+        // "this" refers to the "owner" of the function
+        // the cat1 object owns the fullName function
+        return this.firstName + " " + this.lastName;
+};
+/*
+- can access object properties with cat1.firstName or cat1["firstName"]
+- can access object methods with cat1.fullName() or name = cat1.fullName()
+*/
 
 // for testing purposes, it is convenient to use document.write() to display data
 /* using document.write() after an HTML doc is loaded, will delete all existing HTML
