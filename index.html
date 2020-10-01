@@ -203,6 +203,15 @@ str.trim() -> removes whitespace from beginning and end of a string
 
 /*
 NUMBERS
+num1 = 123e^5   same thing as 123 * 10^5
+- JavaScript will try to convert strings to numbers when multiplying, dividing
+and subtracting
+    "100" * "10" = 1000
+    "100"/"10" = 10
+    "100" - "10" = 90
+    "100" + "10" = "10010"
+- numbers are added, strings are concatenated
+    10 + 20 + "40" = 3040   js reads from left to right. add nums, concat strings
 */
 </script>
 
