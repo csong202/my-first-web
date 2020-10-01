@@ -127,11 +127,17 @@ var cat1 = {firstName:"Simba",
         // "this" refers to the "owner" of the function
         // the cat1 object owns the fullName function
         return this.firstName + " " + this.lastName;
-};
+    };
+
 /*
 - can access object properties with cat1.firstName or cat1["firstName"]
 - can access object methods with cat1.fullName() or name = cat1.fullName()
 */
+
+// avoid String, Number, and Boolean objects
+var str_x = new String();  // declares str_x as String object
+var num_y = new Number(); // declares num_y as a Number object
+var bool_z = new Boolean(); // declares bool_z as a Boolean object
 
 // for testing purposes, it is convenient to use document.write() to display data
 /* using document.write() after an HTML doc is loaded, will delete all existing HTML
@@ -158,7 +164,7 @@ Common HTML Events
 */
 
 /*
-Strings
+STRINGS
 Useful Properties
     stringVarName.length -> returns the length of a string
 Escape Characters: same as python
@@ -176,7 +182,27 @@ str.search("python") -> returns position of "python"
     search() vs indexOf()
     - search() method cannot take a second start position argument
     - indexOf() cannot take powerful search values (regular expressions)
-str.slice(a, b) ->
+str.slice(a, b) -> returns substring from indices a to b-1
+    - if a=-12 and b=-6, slices out portion of string from indices -12 to -6
+    - if a is omitted, -> str[a+1, end]
+str.substring(a, b)
+    - same thing as slice, only substring can't take negative numbers
+str.substr(a, b)
+    - a is starting position, b is length of extracted part
+    - if a is negative, the position counts from the end of the string
+str.replace("old","new") -> creates new string that has "new" in place of "old"
+    - default: case sensitive, only replaces first match
+    - to replace case insensitive use a regular expression with an /i tag
+    - str.replace(/old/i, "new")
+    - to replace all matches, use a regular expression with a /g flag
+    - str.replace(/old/g, "new")
+str3 = str1.concat(" ", str1) -> str1 + " " + str2
+    - concat() method can be used instead of the plus operator
+str.trim() -> removes whitespace from beginning and end of a string
+*/
+
+/*
+NUMBERS
 */
 </script>
 
