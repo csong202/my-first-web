@@ -33,3 +33,24 @@ p {
     font-family: Abel;
     font-size: 18px;
 }
+
+/* style the nav bar */
+.narBar {
+    overflow: hidden;
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navBar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navBar a:hover {
+    background-color: #111111
+}

@@ -78,6 +78,8 @@ can write some <i>italic</i> text too?</p><br>
 
 <button onclick="window.print()">Print this page</button><br>
 
+<p id="demo"></p>
+
 <!-- *****JAVASCRIPT**** -->
 
 <script>
@@ -120,14 +122,15 @@ null == undefined -> True
 // js does not have ints and floats, only numbers
 // typeof operator returns the type of a variable or an expression
 var cat1 = {firstName:"Simba",
+    lastName:"Song",
     catBreed:"Domestic Shorthair",
-    weight:13.0
+    weight:13.0,
     // method is a function stored as a property
     fullName: function() {
         // "this" refers to the "owner" of the function
         // the cat1 object owns the fullName function
         return this.firstName + " " + this.lastName;
-    };
+    }
 
 /*
 - can access object properties with cat1.firstName or cat1["firstName"]
@@ -150,7 +153,7 @@ window.alert(3 * x);
 
 // for debugging purposes, you can call the console.log() method
 /* pres F12 on keyboard to activate debugging, then select "console" */
-console.log("This is the console")
+console.log("This is the console");
 console.log(y / x);
 
 /*
@@ -212,7 +215,142 @@ and subtracting
     "100" + "10" = "10010"
 - numbers are added, strings are concatenated
     10 + 20 + "40" = 3040   js reads from left to right. add nums, concat strings
-*/
+
+NaN - Not a Number
+- NaN is a JavaScript reserved word indicating that a number is not a legal number.
+- tryin to do arithmatic with a non-numeric string will result in NaN
+var x = 100/"apple";    x will be NaN
+isNan(x) = True
+var z = 10 + NaN    z will be NaN
+var z = "5" + NaN   z will be 5NaN
+typeof Nan      returns number
+
+Infinity
+while (myNumber != Infinity) {      execute until Infinity
+var x = 2 / 0;       is Infinity
+var y = -2 / 0;          is -Infinity
+type of Infinity        returns number
+
+Methods
+.toString()     converts num to str
+.toExponential()        returns a string, with number rounded and written
+    using exponential notation. A parameter defines the number of characters
+    behind the decimal point. if no parameter, js will not round the number
+.toFixed(d)      returns a string, with the number written with d decimals
+    var x = 9.656;
+    x.toFixed(2)       retuns 9.66
+.toPrecision()  returns a string, with a number written with a specified
+    lenth
+    var x = 9.656;
+    x.toPrecision(2);   returns 9.7
+.valueOf    returns a number as a number
+    (123).valueOf();     returns 123
+    (120 + 3).valueOf();    returns 123
+Converting Variables to Numbers
+Number()
+    Number(True) -> 1
+    Number(False) -> 0
+    Number("   10") -> 10
+    Number("10","33") -> NaN
+    Number("10 33") -> NaN
+    Number("John") -> Nan
+    // number method can convert date to a number
+    Number(new Date("2017-09-30")) -> 15067296000000
+parseInt()
+    parseInt("10 20 30") -> 10
+    parseInt("10 years") -> 10
+    parseInt("years 10") -> NaN
+parseFloat()
+ */
+
+ /*
+ ARRAYS
+ - arrays are objects. typeof arrName -> object
+ - arrays use numbers to access its "elements", objects use names to access its
+ "members"
+ - array elemnts can be objects
+ - javascript variables can be objects. Arrays are special kinds of objects
+ - you can have variables of different types in the same array
+ myArray[0] = Date.now;
+ myArray[1] = myFunction;
+ myArray[2] = myCars;
+
+ ARRAY METHODS
+ myArray.length
+    returns length of array
+ myArray.toString()
+    converts array to string of comma separated array values
+myArray.join()
+    behaves like toString() but you can specify the separator
+    fruits.join(" * ") -> "Banana * Orange * Apple * Mango"
+myArray.pop()
+    removes last element from an array
+    pop() method returns that value that was "popped out"
+myArray.push("Kiwi")
+    adds new element to end of an array
+    push() method returns the new array length
+myArray.shift()
+    removes the first array element and "shifts" all other elements
+    to a lower index
+    shift() method returns that string that was "shifted out"
+myArray.unshift()
+    adds a new element to the beginning of an array and "unshifts"
+    older elements
+    unshift() method returns the new array length
+myArray[myArray.length] = "Kiwi"
+    adds new element to end of an array
+delete myArray[0]
+    deletes element, may leave undefined hole in the array
+    use pop() or shift() instead
+myArray.splice(2, 0, "Lemon", "Kiwi")
+    2 degines the position where new elements should be added
+    0 defines how many elements should be removed
+    splice() returns an array with the deleted items
+    splice() removes items without leaving "holes" in the array
+var myChildren = myGirls.concat(myBoys) myGirls and myBoys are arrays
+    creates new array by concatenating existing arrays
+    can take any number of array arguments
+var citrus = fruits.slice(a,b)
+    slices out a piece of an array into a new array
+    slice() creates a new array
+    slices a to b-1
+    if second argument is omitted, slices from a to end
+SORTING ARRAYS
+fruits.sort()
+    sorts an array alphabetically
+fruits.reverse()
+    reverses the elements in an array
+    you can use it to sort an array in decreasing order 
+        (first sort() then reverse())
+Numeric Sort
+    sort by using a compare function
+    var points = [40, 100, 1, 5, 25, 10]
+    points.sort(function(a, b){return a - b})
+    decreasing order: points.sort(function(a, b){return b - a})
+Compare Function
+    compares all values in an array, two values at a time
+    if (a - b) < 0, then a is sorted as a value lower than b
+Sorting an Array in Random order
+    points.sort(function(a, b){return 0.5 - Math.random()})
+Math.max.apply(null, myArray)
+    find the highest number
+Math.max.apply(null, myArray)
+    find the lowest number
+ */
+
+/* LOOPS */
+var: fruits, text, fLen, i;
+fruits = ["Banana","Orange","Apple","Mango"];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fruits[i] + "</li>";
+}
+text += "</ul>";
+
+document.getElementById("demo").innerHTML = text;
+
 </script>
 
 </body>
