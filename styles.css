@@ -1,5 +1,7 @@
 body {
-	background-color: #202020   /* dark grey */
+    background-color: #202020;   /* dark grey */
+    padding: 20px;
+    padding-top: 5px;
 }
 * {
     /* CSS universal selector. selects all elements HTML elements on page */
@@ -28,7 +30,7 @@ h4 {
     font-family: Georgia;
     font-size: 20px;
 }
-p {
+p, {
     color: thistle;
     font-family: Abel;
     font-size: 18px;
@@ -37,7 +39,7 @@ p {
 /* style the nav bar */
 .narBar {
     overflow: hidden;
-    background-color: #333333;
+    background-color: #4f4f55;
     position: fixed;
     top: 0;
     width: 100%;
@@ -52,5 +54,10 @@ p {
     font-size: 18px;
 }
 .navBar a:hover {
-    background-color: #111111
+    background-color:#54545a
+}
+.navBar:after /* clear area under nav bar */{
+    content:"";
+    display: table;
+    clear: both;
 }
