@@ -1,9 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    
+    <style>
+        body{
+            padding: 50px;
+        }
+    </style>
+
+    <script src="https://kit.fontawesome.com/yourcode.js">
+        //getting fontsawesome icons
+    </script>
+
 </head>
 <body>
 
+<!-- BORDERS -->
+<h2>let's see some borders</h2>
+<p style="border-style:groove">grooved border</p>
+<p style="border-style:ridge">ridged border</p>
+<p style="border-style:inset">inset border</p>
+<p style="border-style:outset">outset border</p>
+<p style="border-style:hidden">hidden border</p>
+<pre>The border-style property specifies what kind of border to display.
+The following values are allowed:
+dotted - dotted border
+dashed - dashed border
+solid - solid border
+groove - defines a 3D grooved border
+ridge - 3D rdiged border
+inset - inset border
+outset - outset border
+none - no border
+hidden - hidden border
+</pre>
+<p style="border-top:dashed; border-bottom:double;">
+    the border does not have to be the same on all 4 sides of the element</p>
+<p style="border-style:dashed; border-width: 5px;">this border do be 5px thiccc</p>
+<p style="border-style: dashed; border-width: 5px 20px;">the border-width property can have from 1 to 4 values (top, right, bottom, left)
+<br> this border has 5px top and bottom, and 20 px on the sides</p>
+<p style="border-style:solid; border-color:deepskyblue rebeccapurple darkcyan firebrick">
+    the border-color property can have from 1 to 4 values (top, right, bottom, left)</p>
+<p style="border-style: dotted solid double dashed">the border-style property can have 1 to 4 values (top, right, bottom, left)</p>
+<p style="border-left: 6px solid red; background-color: lightslategray">
+    the border property is a shorthad property for the following individaul border properties: borde-width, border-style,
+border-color</p>
+<h3 style="border: 2px double royalblue; border-radius: 5px">Rounded Borders</h3>
+
+<!-- MARGINS & PADDING -->
+<h2>Margins & Padding</h2>
+<pre style="margin: 20px; padding: 15px; border: 3px solid coral">the margin property creates space around an element, outside of any defined borders
+    the padding property generates space around an element's content, inside of any defined borders
+</pre>
+<p ></p>
+<div style="margin: auto; border: 3px solid blueviolet; width: 70%">
+    <p style="margin: inherit">can set the margin property to auto to horizontally center the element within its container <br>
+        also, the margin can be inherited from the parent element (div)</p>
+</div>
+
+<p style="margin: 0 0 20px 0">top and bottom margins can be collapsed into a single margin that is equal to the largest of the 2 margins</p>
+<p style="margin: 15px 0 0 0">the p above has a bottom margin of 20px and this p element has a margin of 15px. the margin between these elements will
+    be 20px not 15 + 20
+</p>
+
+<pre style="font-family: Comic Sans MS">the CSS width property specifies the width of an element's content area. The content area is the portion inside
+    the padding, border, and margin of an element. So, if an element has a specified with, the padding added to that element
+    will be added to the toal width of the element.
+</pre>
+
+<div style="box-sizing: border-box; border: 4px dotted lightgreen; width: 80%; padding: 25px; text-align: right;">
+    <p>use the box-sizing property to keep the width at 80%, no matter the amound of padding</p>
+</div>
+
+<!-- OUTLINES -->
+<h2>Outlines</h2>
+<p style="outline: 4px darkorchid solid; border:3px solid black; margin: 0 30px 0 30px">
+    outlines are drown around elements, outside the borders<br>
+    outlines have the same style properties as borders
+</p>
+<p style="border: 2px solid yellow; outline-style: solid; outline-color: invert;">
+    "invert" performs a color inversion, this ensures that the outline is visible regardless of color background
+</p><br>
+<p style="margin: auto; border: 1px solid navy; outline: 2px solid mediumseagreen; outline-offset: 15px; width:80%">
+    The outline-offset property adds space between an outline and the edge/border of an element. 
+    like a margin or padding, the space between an element and its outline is transparent
+</p><br>
+
+<!-- CSS TEXT FORMATTING -->
+<h2 style="text-align: center; text-transform: uppercase; color: tomato">text</h2>
+<p style="text-indent: 50px; text-align: justify; letter-spacing: 3px">lets goooo format some text.
+    justify stretches each line so that each line has equal width, and the left and right margins are straight
+</p>
+<p style="direction: rtl; unicode-bidi: bidi-overrade;font-family: Verdana; vertical-align: middle; border: 1px ridge blue">
+    the direction and unicode-bidi properties can be used to change the text direction of an element. <br>
+    ...
+</p>
+<p style="text-decoration: overline;">this is overline</p>
+<p style="text-decoration: line-through;">this is line-through, like strikethrough</p>
+<p style="text-decoration: underline;">the classic underline. don't use unless this is a link so we don't confuse the reader</p>
+<p style="text-transform: capitalize;">the text-transform property can turn everything into uppercase or lowercase letters, or capitalize
+    the first letter of each word
+</p>
+<p style="letter-spacing: -2px; line-height: 1.8; font-size: 120%">
+    i can use negative letter spacing to make my writing crowded like the Zara logo</p>
+
+<p style="word-spacing: 10px">
+    the word-spacing property is used to, you guessed it, specify the space between words in a text 
+    <em>*gasps in <strong>shock</strong>*</em>
+</p>
+<p style="word-spacing: -5px;">negative word spacing</p>
+<p style="white-space: nowrap">the white-space property specifies how white-space inside an element is handled.
+    This example demos how to disable text wrapping inside an element.
+    Removing the whitepace puts everything in the p on 1 long ass line.
+    This is some text. This is some text. This is some text. This is some text. I hate driving. This is some text.
+</p>
+<p style="text-shadow: 2px 3px 4px red;">ouuuu a shadow effect
+    2px: horizontal shadow; 3px: vertical shadow; 4px: blur
+</p>
+<p style="font-style: italic">we got some italic text</p>
+<p style ="font-style: oblique">we got some oblique text (very similar to italic, but less supported)</p>
+<p style="font-weight: bold">lets make some thic text</p>
+<p style="font-variant: small-caps;">The font-variant property specifies whether or not a text should be displayed in a small-caps font.
+</p>
+<p style="font-size: 0.875 em">Most people use a combination of percent and em for font size</p>
+<p style="font-size: 2vw"><strong>Responsive Font Size</strong>: the text size can be set with a vw unit, which means viewport width.
+That way the text size will follow the size of the browser window</p>
+<p style="font: italic small-caps bold 12px/30px Georgia, serif">font shorthand</p>
+
+<!-- ICONS -->
+    
 </body>
 </html>
